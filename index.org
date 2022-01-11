@@ -1,0 +1,9 @@
+#+title: Stop Orders
+#+author: Matt Brigida, Ph.D.
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* Protecting Gains and Limiting Losses
+
+
+
+* Use in Momentum Trading Strategies
