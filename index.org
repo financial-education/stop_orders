@@ -1,9 +1,38 @@
 #+title: Stop Orders
 #+author: Matt Brigida, Ph.D.
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+SETUPFILE: ~/.emacs.d/org-themes/src/readtheorg_inline/readtheorg_inline.theme
 
-* Protecting Gains and Limiting Losses
+Bottom line up front:
+
+#+begin_quote
+Stop orders are a type of /price-contingent/ order mainly used to exit from a losing position, however they can also be used in momentum trading strategies.
+#+end_quote
+
+* Examples: Limiting Losses
+
+** You own stock
+
+Let's say you own 100 shares of XOM, and XOM's price per share today is $80.  This means your position value is $8000.  What if you wanted to limit your losses to $1000.  You will lose $1000 if the stock falls to $70 per share.  Your broker offers *stop sell* orders to allow you to attempt to exit your position at $70.
+
+If you submit a stop sell order for $100 XOM with a stop price of $70, your broker will hold the sell order until the market price of XOM touches $70.  At that point your broker will submit a market sell 100 XOM to the exchange for you.  Hopefully, you will exit your position near $70.
+
+
+** You are short stock
+
+** Key points
+
+1.  If the order has not yet been triggered, it is held by your broker and it does not sit in an exchange's limit order book.
+2.  There is no guarantee you will sell the stock for $70.  To get a guarantee we need to use options.
+
+
+
+* Difference from Limit Orders
+
+
 
 
 
 * Use in Momentum Trading Strategies
+
+
+* The Stop-Limit Order
