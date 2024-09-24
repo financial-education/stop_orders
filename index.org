@@ -5,7 +5,7 @@
 Bottom line up front:
 
 #+begin_quote
-Stop orders are a type of /price-contingent/ order mainly used to exit from a losing position, however they can also be used in momentum trading strategies.
+Stop orders are a type of /price-contingent/ order mainly used to limit losses, however they can also be used in momentum trading strategies.
 #+end_quote
 
 * Examples: Limiting Losses
@@ -31,25 +31,26 @@ Now, assume you are short 500 shares of BA.  BA's price per share is now $180.  
 
 * Difference from Limit Orders
 
-You might think this order type is redundant--why not just use limit orders?  Consider the limit sell and stop sell:
+You might think this order type is redundant--why not just use limit orders?
+
+Consider the limit sell and stop sell:
 
 -  Stop sell:  sell the stock if the price falls to some point.
 -  Limit sell: sell the stock at no lower than some price (that is if the stock /rises/ to some value).
 
-Let's revisit the first example, you own 100 XOM and want to sell if the price falls from $80 to $70 per share.
-
-
+Let's revisit the first example, you own 100 XOM and want to sell if the price falls from $80 to $70 per share.  You try and put a limit sell order for 100 XOM at a limit price of $70 per share.  You send this order to the exchange and what happens?  It is immediately executed at around $80---which is /no lower/ than $70.  
 
 Now, consider the limit buy and stop buy:
 
 -  Stop buy:  buy the stock if the price rises to some point.
 -  Limit buy: buy the stock at no higher than some price (that is if the stock /falls/ to some value).
 
+Assume again we are short 500 shares of BA at $180 per share.  If we enter a limit buy for 500 BA shares at $200, the order will again be immediately executed at around $180.  Our limit buy simply said buy no higher than $200.
 
-
-
+So stop and limit orders are not redundant, and each is useful in unique circumstances.
 
 * Use in Momentum Trading Strategies
+
 
 
 * The Stop-Limit Order

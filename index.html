@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-09-23 Mon 22:07 -->
+<!-- 2024-09-24 Tue 09:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Stop Orders</title>
@@ -219,16 +219,16 @@ $(function() {    $('.note').before("<p class='admonition-title note'>Note</p>")
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org28f75fe">1. Examples: Limiting Losses</a>
+<li><a href="#org09ee18d">1. Examples: Limiting Losses</a>
 <ul>
-<li><a href="#org07bcb6b">1.1. You own stock</a></li>
-<li><a href="#orgdce43f5">1.2. You are short stock</a></li>
-<li><a href="#orge7a70ef">1.3. Key points</a></li>
+<li><a href="#orgbc73072">1.1. You own stock</a></li>
+<li><a href="#org9a01525">1.2. You are short stock</a></li>
+<li><a href="#org10a04c9">1.3. Key points</a></li>
 </ul>
 </li>
-<li><a href="#orgb518a04">2. Difference from Limit Orders</a></li>
-<li><a href="#org8b578a1">3. Use in Momentum Trading Strategies</a></li>
-<li><a href="#orgcfbcf5a">4. The Stop-Limit Order</a></li>
+<li><a href="#org85a1fa6">2. Difference from Limit Orders</a></li>
+<li><a href="#orgf25fe7d">3. Use in Momentum Trading Strategies</a></li>
+<li><a href="#orge8aedc6">4. The Stop-Limit Order</a></li>
 </ul>
 </div>
 </div>
@@ -238,16 +238,16 @@ Bottom line up front:
 
 <blockquote>
 <p>
-Stop orders are a type of <i>price-contingent</i> order mainly used to exit from a losing position, however they can also be used in momentum trading strategies.
+Stop orders are a type of <i>price-contingent</i> order mainly used to limit losses, however they can also be used in momentum trading strategies.
 </p>
 </blockquote>
 
-<div id="outline-container-org28f75fe" class="outline-2">
-<h2 id="org28f75fe"><span class="section-number-2">1.</span> Examples: Limiting Losses</h2>
+<div id="outline-container-org09ee18d" class="outline-2">
+<h2 id="org09ee18d"><span class="section-number-2">1.</span> Examples: Limiting Losses</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org07bcb6b" class="outline-3">
-<h3 id="org07bcb6b"><span class="section-number-3">1.1.</span> You own stock</h3>
+<div id="outline-container-orgbc73072" class="outline-3">
+<h3 id="orgbc73072"><span class="section-number-3">1.1.</span> You own stock</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Let's say you own 100 shares of XOM, and XOM's price per share today is $80.  This means your position value is $8000.  What if you wanted to limit your losses to $1000.  You will lose $1000 if the stock falls to $70 per share.  Your broker offers <b>stop sell</b> orders to allow you to attempt to exit your position at $70.
@@ -260,8 +260,8 @@ If you submit a stop sell order for $100 XOM with a stop price of $70, your brok
 </div>
 
 
-<div id="outline-container-orgdce43f5" class="outline-3">
-<h3 id="orgdce43f5"><span class="section-number-3">1.2.</span> You are short stock</h3>
+<div id="outline-container-org9a01525" class="outline-3">
+<h3 id="org9a01525"><span class="section-number-3">1.2.</span> You are short stock</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Now, assume you are short 500 shares of BA.  BA's price per share is now $180.  You want to limit your losses to $10,000, which occurs if the price rises to $200 per share. So you submit a stop buy order with a stop price of $200.  If BA rises to $200, your broker will submit to the exchange a market buy 500 BA shares on your behalf.  Again, since it is a market buy, there is no guarantee of what price you will receive at the exchange.
@@ -270,8 +270,8 @@ Now, assume you are short 500 shares of BA.  BA's price per share is now $180.  
 </div>
 
 
-<div id="outline-container-orge7a70ef" class="outline-3">
-<h3 id="orge7a70ef"><span class="section-number-3">1.3.</span> Key points</h3>
+<div id="outline-container-org10a04c9" class="outline-3">
+<h3 id="org10a04c9"><span class="section-number-3">1.3.</span> Key points</h3>
 <div class="outline-text-3" id="text-1-3">
 <ol class="org-ol">
 <li>If the order has not yet been triggered, it is held by your broker and it does not sit in an exchange's limit order book.</li>
@@ -282,11 +282,15 @@ Now, assume you are short 500 shares of BA.  BA's price per share is now $180.  
 </div>
 </div>
 
-<div id="outline-container-orgb518a04" class="outline-2">
-<h2 id="orgb518a04"><span class="section-number-2">2.</span> Difference from Limit Orders</h2>
+<div id="outline-container-org85a1fa6" class="outline-2">
+<h2 id="org85a1fa6"><span class="section-number-2">2.</span> Difference from Limit Orders</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-You might think this order type is redundant&#x2013;why not just use limit orders?  Consider the limit sell and stop sell:
+You might think this order type is redundant&#x2013;why not just use limit orders?
+</p>
+
+<p>
+Consider the limit sell and stop sell:
 </p>
 
 <ul class="org-ul">
@@ -295,10 +299,8 @@ You might think this order type is redundant&#x2013;why not just use limit order
 </ul>
 
 <p>
-Let's revisit the first example, you own 100 XOM and want to sell if the price falls from $80 to $70 per share.
+Let's revisit the first example, you own 100 XOM and want to sell if the price falls from $80 to $70 per share.  You try and put a limit sell order for 100 XOM at a limit price of $70 per share.  You send this order to the exchange and what happens?  It is immediately executed at around $80&#x2014;which is <i>no lower</i> than $70.  
 </p>
-
-
 
 <p>
 Now, consider the limit buy and stop buy:
@@ -308,25 +310,30 @@ Now, consider the limit buy and stop buy:
 <li>Stop buy:  buy the stock if the price rises to some point.</li>
 <li>Limit buy: buy the stock at no higher than some price (that is if the stock <i>falls</i> to some value).</li>
 </ul>
+
+<p>
+Assume again we are short 500 shares of BA at $180 per share.  If we enter a limit buy for 500 BA shares at $200, the order will again be immediately executed at around $180.  Our limit buy simply said buy no higher than $200.
+</p>
+
+<p>
+So stop and limit orders are not redundant, and each is useful in unique circumstances.
+</p>
 </div>
 </div>
 
-
-
-
-
-<div id="outline-container-org8b578a1" class="outline-2">
-<h2 id="org8b578a1"><span class="section-number-2">3.</span> Use in Momentum Trading Strategies</h2>
+<div id="outline-container-orgf25fe7d" class="outline-2">
+<h2 id="orgf25fe7d"><span class="section-number-2">3.</span> Use in Momentum Trading Strategies</h2>
 </div>
 
 
-<div id="outline-container-orgcfbcf5a" class="outline-2">
-<h2 id="orgcfbcf5a"><span class="section-number-2">4.</span> The Stop-Limit Order</h2>
+
+<div id="outline-container-orge8aedc6" class="outline-2">
+<h2 id="orge8aedc6"><span class="section-number-2">4.</span> The Stop-Limit Order</h2>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Matt Brigida, Ph.D.</p>
-<p class="date">Created: 2024-09-23 Mon 22:07</p>
+<p class="date">Created: 2024-09-24 Tue 09:12</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
