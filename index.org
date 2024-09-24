@@ -31,6 +31,20 @@ Now, assume you are short 500 shares of BA.  BA's price per share is now $180.  
 
 * Difference from Limit Orders
 
+You might think this order type is redundant--why not just use limit orders?  Consider the limit sell and stop sell:
+
+-  Stop sell:  sell the stock if the price falls to some point.
+-  Limit sell: sell the stock at no lower than some price (that is if the stock /rises/ to some value).
+
+Let's revisit the first example, you own 100 XOM and want to sell if the price falls from $80 to $70 per share.
+
+
+
+Now, consider the limit buy and stop buy:
+
+-  Stop buy:  buy the stock if the price rises to some point.
+-  Limit buy: buy the stock at no higher than some price (that is if the stock /falls/ to some value).
+
 
 
 
