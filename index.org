@@ -19,12 +19,15 @@ If you submit a stop sell order for $100 XOM with a stop price of $70, your brok
 
 ** You are short stock
 
+
+Now, assume you are short 500 shares of BA.  BA's price per share is now $180.  You want to limit your losses to $10,000, which occurs if the price rises to $200 per share. So you submit a stop buy order with a stop price of $200.  If BA rises to $200, your broker will submit to the exchange a market buy 500 BA shares on your behalf.  Again, since it is a market buy, there is no guarantee of what price you will receive at the exchange.
+
+
 ** Key points
 
 1.  If the order has not yet been triggered, it is held by your broker and it does not sit in an exchange's limit order book.
 2.  There is no guarantee you will sell the stock for $70.  To get a guarantee we need to use options.
-
-
+3.  You cannot submit a stop order to your broker---you can submit a stop buy or a stop sell.  
 
 * Difference from Limit Orders
 
