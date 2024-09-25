@@ -51,6 +51,10 @@ So stop and limit orders are not redundant, and each is useful in unique circums
 
 * Use in Momentum Trading Strategies
 
+Momentum trading is a class of algorithmic trading strategy where you bet that a given asset will continue its present path.  That is, if a stock is increasing you bet it will keep increasing.  Similarly, you think declining stocks may continue to decline.
 
+Say NVDA is at $100, and you think if it rises by 5% you should buy.  You can enter a stop buy order with a $105 stop price.  Note, we are calling this /stop/ order but it is actually opening the position.  Consider again you could not have used a limit order to enter this trade.  Similarly you can use stop sell orders to initiate a short position based on momentum.
 
 * The Stop-Limit Order
+
+When a stop order is triggered it is sent from your broker to the exchange as a market order. A /stop-limit/ order is a stop order that once triggered, is sent to the exchange as a limit order.  Consider our first example where you own 100 shares of XOM, XOM's price per share today is $80, and you want to sell if the stock falls to $70.  You can enter a stop-limit order with a $70 stop-limit.  If the stock falls to $70, your broker will send a limit sell 100 XOM to the exchange. The downside of this is if the bid moves below $70 before your order reaches the exchange your order will not be executed.  So you may never exit the trade---which is a flaw in a loss mitigation strategy.  In the authors opinion, never use stop-limit orders.  It is better to, in this case, buy a put option struck at $70.
